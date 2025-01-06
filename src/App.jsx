@@ -123,7 +123,9 @@ function App() {
         <Output label={ 'Loan Amount' } name='balance' type='number' testId='balance' onChange={ handleBalance }/>
         <Output label={ 'Interest Rate (%)' } name='rate' type='number' step='0.01' testId='rate' onChange={ handleRate }/>
         <Output label={ 'Loan Term (years)' } name='term' dropDown={ termOpt } testId='term' onChange={ handleTerm }/>
-        <button className='btn btn-primary btn-lg' name='submit' data-testid='submit'>Calculate</button>
+        <div className="button-area">
+          <button className='button' name='submit' data-testid='submit'>Calculate</button>
+        </div>
       </form>
       <div className='display' id='output' data-testid='output' ref={ outputRef }/>
     </div>
